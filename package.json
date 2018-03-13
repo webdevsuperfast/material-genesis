@@ -1,0 +1,49 @@
+{
+  "name": "genesis-boilerplate",
+  "version": "0.0.1",
+  "description": "Just another genesis child theme built on Sass and Bourbon.",
+  "repository": "git+https://github.com/webdevsuperfast/genesis-boilerplate.git",
+  "keywords": [
+    "genesis",
+    "wordpress"
+  ],
+  "author": "Rotsen Mark Acob",
+  "license": "WTFPL",
+  "homepage": "https://github.com/webdevsuperfast/genesis-boilerplate#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-wait": "0.0.2",
+    "jshint": "^2.9.5",
+    "merge-stream": "^1.0.1",
+    "run-sequence": "^2.2.1",
+    "vinyl-paths": "^2.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bourbon": "^5.0.0",
+    "bourbon-neat": "2.1.0",
+    "gulp-copy": "^1.1.0",
+    "jeet": "^7.2.0",
+    "jquery": "^3.3.1",
+    "mdbootstrap": "^4.5.0",
+    "normalize.css": "^8.0.0",
+    "popper.js": "^1.12.9",
+    "sass-flex-mixin": "^1.0.3",
+    "webfontloader": "^1.6.28"
+  },
+  "main": "index.js",
+  "private": true
+}

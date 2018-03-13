@@ -1,0 +1,13 @@
+/* ## Site Header
+----------------------------------------------------------------------------- */
+.site-header {
+    padding: {
+        top: $font-size-base;
+        bottom: $font-size-base;
+    }
+    .title-area {
+        .site-title {
+            margin-bottom: 0;
+        }
+    }
+}
