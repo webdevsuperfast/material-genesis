@@ -2,17 +2,17 @@
 /**
  * Extras
  *
- * @package      Genesis Boilerplate
+ * @package      Material Genesis
  * @since        0.0.1
  * @link         http://rotsenacob.com
  * @author       Rotsen Mark Acob <rotsenacob.com>
- * @copyright    Copyright (c) 2016, Rotsen Mark Acob
+ * @copyright    Copyright (c) 2018, Rotsen Mark Acob
  * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
  *
 */
 
 // Add additional classes for Bootstrap
-add_filter( 'gb_add_classes', function( $classes ) {
+add_filter( 'mg_add_classes', function( $classes ) {
     $new_classes = array(
         'content-sidebar-wrap' => 'row',
         'content' => 'col-md-8',
@@ -31,10 +31,10 @@ add_filter( 'gb_add_classes', function( $classes ) {
 } );
 
 // filter menu args for bootstrap walker and other settings
-add_filter( 'wp_nav_menu_args', 'gb_nav_menu_args_filter' );
-function gb_nav_menu_args_filter( $args ) {
+add_filter( 'wp_nav_menu_args', 'mg_nav_menu_args_filter' );
+function mg_nav_menu_args_filter( $args ) {
 
-    require_once( GB_MODULES . 'class-wp-bootstrap-navwalker.php' );
+    require_once( MG_MODULES . 'class-wp-bootstrap-navwalker.php' );
     
     if ( 'primary' === $args['theme_location'] ) {
         $args['container'] = false;
@@ -49,8 +49,8 @@ function gb_nav_menu_args_filter( $args ) {
 }
 
 // add bootstrap markup around the nav
-add_filter( 'wp_nav_menu', 'gb_nav_menu_markup_filter', 10, 2 );
-function gb_nav_menu_markup_filter( $html, $args ) {
+add_filter( 'wp_nav_menu', 'mg_nav_menu_markup_filter', 10, 2 );
+function mg_nav_menu_markup_filter( $html, $args ) {
     // only add additional Bootstrap markup to primary navigation
     if ( 'primary' !== $args->theme_location ) {
         return $html;

@@ -2,11 +2,11 @@
 /**
  * Functions
  *
- * @package      Genesis Boilerplate
+ * @package      Material Genesis
  * @since        0.0.1
  * @link         http://rotsenacob.com
  * @author       Rotsen Mark Acob <rotsenacob.com>
- * @copyright    Copyright (c) 2016, Rotsen Mark Acob
+ * @copyright    Copyright (c) 2018, Rotsen Mark Acob
  * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
  *
 */
@@ -15,13 +15,13 @@
 include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
-define( 'GB_THEME_NAME', 'Genesis Boilerplate' );
-define( 'GB_THEME_URL', 'http://rotsenacob.com/' );
-define( 'GB_THEME_VERSION', '0.0.1' );
-define( 'GB_LIB', CHILD_DIR . '/lib/' );
-define( 'GB_MODULES', GB_LIB . 'modules/' );
-define( 'GB_JS', CHILD_URL . '/assets/js/' );
-define( 'GB_CSS', CHILD_URL . '/assets/css/' );
+define( 'MG_THEME_NAME', 'Material Genesis' );
+define( 'MG_THEME_URL', 'http://rotsenacob.com/' );
+define( 'MG_THEME_VERSION', '0.0.1' );
+define( 'MG_LIB', CHILD_DIR . '/lib/' );
+define( 'MG_MODULES', MG_LIB . 'modules/' );
+define( 'MG_JS', CHILD_URL . '/assets/js/' );
+define( 'MG_CSS', CHILD_URL . '/assets/css/' );
 
 //* Cleanup WP Head
 remove_action( 'wp_head', 'rsd_link' );
@@ -33,14 +33,14 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link' );
 remove_action( 'wp_head', 'wp_shortlink_wp_head' );
 
 //* Remove Query Strings
-add_filter( 'style_loader_src', 'gb_remove_cssjs_ver', 10, 2 );
-add_filter( 'script_loader_src', 'gb_remove_cssjs_ver', 10, 2 );
+add_filter( 'style_loader_src', 'mg_remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'mg_remove_cssjs_ver', 10, 2 );
 
 //* Prevent HTML on Comments
-add_filter( 'preprocess_comment', 'gb_comment_post', '', 1 );
-add_filter( 'comment_text', 'gb_comment_display', '', 1 );
-add_filter( 'comment_text_rss', 'gb_comment_display', '', 1 );
-add_filter( 'comment_excerpt', 'gb_comment_display', '', 1 );
+add_filter( 'preprocess_comment', 'mg_comment_post', '', 1 );
+add_filter( 'comment_text', 'mg_comment_display', '', 1 );
+add_filter( 'comment_text_rss', 'mg_comment_display', '', 1 );
+add_filter( 'comment_excerpt', 'mg_comment_display', '', 1 );
 
 //* This stops WordPress from trying to automatically make hyperlinks on text:
 remove_filter( 'comment_text', 'make_clickable', 9 );
@@ -99,7 +99,7 @@ remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_before_header', 'genesis_do_subnav' );
 
 // Include Bootstrap Navwalker
-// require_once( GB_MODULES . 'class-wp-bootstrap-navwalker.php' );
+// require_once( MG_MODULES . 'class-wp-bootstrap-navwalker.php' );
 
 //* Include php files from lib folder
 //* @link https://gist.github.com/theandystratton/5924570

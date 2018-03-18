@@ -11,23 +11,23 @@
  *
 */
 
-// Default array of classes to add separated from gb_add_markup_sanitize_classes()
+// Default array of classes to add separated from mg_add_markup_sanitize_classes()
 // @link https://wordpress.stackexchange.com/questions/214825/dynamically-adding-filters
-function gb_merge_genesis_attr_classes() {
+function mg_merge_genesis_attr_classes() {
     $classes = array();
 
-    if ( has_filter( 'gb_add_classes' ) ) {
-        $classes = apply_filters( 'gb_add_classes', $classes );
+    if ( has_filter( 'mg_add_classes' ) ) {
+        $classes = apply_filters( 'mg_add_classes', $classes );
     }
 
     return $classes;
 }
 
 // Clean classes output
-function gb_add_markup_sanitize_classes( $attr, $context ) {
+function mg_add_markup_sanitize_classes( $attr, $context ) {
     $classes = array();
-    if ( has_filter( 'gb_clean_classes_output' ) ) {
-        $classes = apply_filters( 'gb_clean_classes_output', $classes, $context, $attr );
+    if ( has_filter( 'mg_clean_classes_output' ) ) {
+        $classes = apply_filters( 'mg_clean_classes_output', $classes, $context, $attr );
     }
     
     $value = isset( $classes[$context] ) ? $classes[$context] : array();
@@ -45,19 +45,19 @@ function gb_add_markup_sanitize_classes( $attr, $context ) {
 }
 
 // Adds classes array to bsg_add_markup_class() for cleaning
-add_filter( 'gb_clean_classes_output', 'gb_modify_classes_based_on_extras', 10, 3 );
-function gb_modify_classes_based_on_extras( $classes, $context, $attr ) {
-    $classes = gb_merge_genesis_attr_classes( $classes );
+add_filter( 'mg_clean_classes_output', 'mg_modify_classes_based_on_extras', 10, 3 );
+function mg_modify_classes_based_on_extras( $classes, $context, $attr ) {
+    $classes = mg_merge_genesis_attr_classes( $classes );
     
     return $classes;
 }
 
 // Add filter automatically from array keys
-add_action( 'genesis_meta', 'gb_add_array_filters_genesis_attr' );
-function gb_add_array_filters_genesis_attr() {
-    $filters = gb_merge_genesis_attr_classes();
+add_action( 'genesis_meta', 'mg_add_array_filters_genesis_attr' );
+function mg_add_array_filters_genesis_attr() {
+    $filters = mg_merge_genesis_attr_classes();
     foreach( array_keys( $filters ) as $context ) {
         $context = "genesis_attr_$context";
-        add_filter( $context, 'gb_add_markup_sanitize_classes', 10, 2 );
+        add_filter( $context, 'mg_add_markup_sanitize_classes', 10, 2 );
     }
 }
