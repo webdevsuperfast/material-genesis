@@ -1,14 +1,14 @@
 {
-  "name": "genesis-boilerplate",
+  "name": "material-genesis",
   "version": "0.0.1",
-  "description": "Just another genesis child theme built on Sass and Bourbon.",
-  "repository": "git+https://github.com/webdevsuperfast/genesis-boilerplate.git",
+  "description": "Just another Genesis Framework child theme built on Bootstrap 4 and Material Design Bootstrap.",
+  "repository": "git+https://github.com/webdevsuperfast/material-genesis.git",
   "keywords": [
     "genesis",
     "wordpress"
   ],
   "author": "Rotsen Mark Acob",
-  "license": "WTFPL",
+  "license": "GPLv3",
   "homepage": "https://github.com/webdevsuperfast/genesis-boilerplate#readme",
   "devDependencies": {
     "del": "^3.0.0",
@@ -44,6 +44,6 @@
     "sass-flex-mixin": "^1.0.3",
     "webfontloader": "^1.6.28"
   },
-  "main": "index.js",
+  "main": "gulpfile.js",
   "private": true
 }
