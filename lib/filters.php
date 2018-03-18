@@ -4,8 +4,8 @@
  *
  * @package      My Dev House
  * @since        0.0.1
- * @link         http://rotsenacob.com
- * @author       Rotsen Mark Acob <rotsenacob.com>
+ * @link         http://webdevsuperfast.github.io
+ * @author       Rotsen Mark Acob <webdevsuperfast.github.io>
  * @copyright    Copyright (c) 2017, Rotsen Mark Acob
  * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
  *

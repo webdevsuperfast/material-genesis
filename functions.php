@@ -4,8 +4,8 @@
  *
  * @package      Material Genesis
  * @since        0.0.1
- * @link         http://rotsenacob.com
- * @author       Rotsen Mark Acob <rotsenacob.com>
+ * @link         http://webdevsuperfast.github.io
+ * @author       Rotsen Mark Acob <webdevsuperfast.github.io>
  * @copyright    Copyright (c) 2018, Rotsen Mark Acob
  * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
  *
@@ -16,7 +16,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 
 //* Child theme (do not remove)
 define( 'MG_THEME_NAME', 'Material Genesis' );
-define( 'MG_THEME_URL', 'http://rotsenacob.com/' );
+define( 'MG_THEME_URL', 'http://webdevsuperfast.github.io/' );
 define( 'MG_THEME_VERSION', '0.0.1' );
 define( 'MG_LIB', CHILD_DIR . '/lib/' );
 define( 'MG_MODULES', MG_LIB . 'modules/' );
