@@ -1,4 +1,7 @@
-# Genesis Boilerplate
+# Material Genesis
 
-Genesis Boilerplate is yet another starter child theme for the Genesis Framework. It is built using Sass and Bourbon Sass Framework. Building theme assets have been made easy with Bower, NPM and Gulp.
-  
+Material Genesis is a Genesis Framework child theme built on top of [Bootstrap 4](https://getbootstrap.com) and [Material Design Bootstrap](https://mdbootstrap.com/).
+
+### Note
+
+This is a work in progress build and is not recommended for production use.
